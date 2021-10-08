@@ -63,10 +63,14 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
-# `delta` customization
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
 [interactive]
-	diffFilter = delta --color-only
-
+	diffFilter = delta --color-only --features=interactive
+# `delta` customization
 [delta]
 	features = decorations
 	line-numbers = true
