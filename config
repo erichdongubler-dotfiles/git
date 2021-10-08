@@ -43,6 +43,7 @@
 	up = !git pull --rebase --prune "$@" && git submodule update --init --recursive
 [core]
 	autocrlf = input
+	editor = nvim
 	longpaths = true
 	fscache = true
 	pager = less -x1,5
