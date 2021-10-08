@@ -1,0 +1,78 @@
+[user]
+	email = erichdongubler@gmail.com
+	name = Erich Gubler
+[commit]
+	sign = true
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
+	rebase = true
+[push]
+	default = simple
+[merge]
+	ff = only
+	tool = p4merge
+[mergetool "p4merge"]
+	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+[rebase]
+	autoSquash = true
+	autoStash = true
+	missingCommitsCheck = error
+	rescheduleFailedExec = true
+	stat = true
+[stash]
+	showPatch = true
+[log]
+	decorate = full
+[alias]
+	add-no-whitespace = !"f() { git diff-no-whitespace -U0 --no-color \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero -; }; f"
+	canpf = !git commit --amend --no-edit && git push --force-with-lease
+	ch-pk = cherry-pick
+	ckt = checkout
+	diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+	diff-no-whitespace = diff --ignore-space-at-eol -b -w --ignore-blank-lines
+	ls = status
+	pl = !git prettylog
+	prettylog = log --graph --decorate --format=format:'%C(dim white)---%C(reset) %C(bold blue)%h%C(reset) %C(dim white)-%C(reset)%C(auto)%d%C(reset)\n%C(white)%s%C(reset) %C(dim white)%an%C(reset) %C(dim green)(%ar)%C(reset)'
+	push-fwl = push --force-with-lease
+	pushup = !git up && git push
+	re = restore
+	show-root = rev-parse --show-toplevel
+	sw = switch
+	up = !git pull --rebase --prune "$@" && git submodule update --init --recursive
+[core]
+	autocrlf = input
+	longpaths = true
+	fscache = true
+	pager = less -x1,5
+[color]
+	ui = true
+[credential]
+	helper = store
+[diff]
+	colorMoved = dimmed_zebra
+	tool = kdiff3
+[difftool]
+	prompt = false
+[svn]
+	pushmergeinfo = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+# `delta` customization
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = decorations
+	line-numbers = true
+	syntax-theme = Monokai Extended
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
