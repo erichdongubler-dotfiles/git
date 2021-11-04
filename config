@@ -27,6 +27,7 @@
 	decorate = full
 [alias]
 	br = branch
+	cane = commit --amend --no-edit
 	canpf = !git commit --amend --no-edit && git push --force-with-lease
 	ch-pk = cherry-pick
 	ckt = checkout
