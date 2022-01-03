@@ -57,6 +57,8 @@
 [merge]
 	ff = only
 	tool = p4merge
+[mergetool]
+	keepBackup = false
 [mergetool "p4merge"]
 	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 [pager]
