@@ -26,6 +26,7 @@
 [log]
 	decorate = full
 [alias]
+	add-no-whitespace = !"f() { git diff-no-whitespace -U0 --no-color \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero -; }; f"
 	br = branch
 	cane = commit --amend --no-edit
 	canpf = !git commit --amend --no-edit && git push --force-with-lease
