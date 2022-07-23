@@ -1,4 +1,5 @@
 [alias]
+	asm = !python ~/Downloads/git-assembler.py
 	add-no-whitespace = !"f() { git diff-no-whitespace -U0 --no-color \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero -; }; f"
 	br = branch
 	cane = commit --amend --no-edit
@@ -8,7 +9,7 @@
 	diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
 	diff-no-whitespace = diff --ignore-space-at-eol -b -w --ignore-blank-lines
 	ls = status
-	ls-branches = branch --format '%(refname:short)' "$@"
+	ls-branches = branch --format '%(refname:short)'
 	pl = !git prettylog
 	prettylog = log --graph --decorate --format=format:'%C(dim white)---%C(reset) %C(bold blue)%h%C(reset) %C(dim white)-%C(reset)%C(auto)%d%C(reset)\n%C(white)%s%C(reset) %C(dim white)%an%C(reset) %C(dim green)(%ar)%C(reset)'
 	push-fwl = push --force-with-lease
@@ -16,7 +17,9 @@
 	re = restore
 	show-root = rev-parse --show-toplevel
 	sw = switch
-	up = !git pull --rebase --prune "$@" && git submodule update --init --recursive
+	up = !git pull --rebase --prune --tags "$@" && git submodule update --init --recursive
+
+	# push-track git push -u origin (git branch --show-current | str trim)
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
@@ -24,12 +27,15 @@
 	newHighlight = green bold 22
 [commit]
 	sign = true
+	gpgSign = false
+	verbose = true
 [core]
 	autocrlf = input
 	editor = nvim
 	longpaths = true
 	fscache = true
 	pager = less -x1,5
+	fsmonitor = true
 [color]
 	ui = true
 [credential]
@@ -77,6 +83,8 @@
 	missingCommitsCheck = error
 	rescheduleFailedExec = true
 	stat = true
+[rerere]
+	enabled = true
 [stash]
 	showPatch = true
 [svn]
@@ -84,3 +92,6 @@
 [user]
 	email = erichdongubler@gmail.com
 	name = Erich Gubler
+	signingkey = 800756379C56C2CE
+[add "interactive"]
+	useBuiltin = false
