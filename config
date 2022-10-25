@@ -78,6 +78,7 @@
 	missingCommitsCheck = error
 	rescheduleFailedExec = true
 	stat = true
+	updateRefs = true
 [stash]
 	showPatch = true
 [svn]
