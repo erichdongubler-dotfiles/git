@@ -1,3 +1,5 @@
+[advice]
+	addEmptyPathspec = false
 [alias]
 	add-no-whitespace = !"f() { git diff-no-whitespace -U0 --no-color \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero -; }; f"
 	asm = !git-assembler
