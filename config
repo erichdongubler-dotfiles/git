@@ -21,7 +21,7 @@
 	re = restore
 	show-root = rev-parse --show-toplevel
 	sh = !sh
-	stack = graph main HEAD --
+	stack = graph main HEAD
 	sw = switch
 	up = !git pull --rebase --prune "$@" && git submodule update --init --recursive
 [color "diff-highlight"]
