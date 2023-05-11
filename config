@@ -3,6 +3,7 @@
 [alias]
 	add-no-whitespace = !"f() { git diff-no-whitespace -U0 --no-color \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero -; }; f"
 	asm = !git-assembler "$@"
+	bash = !bash
 	br = branch
 	cane = commit --amend --no-edit
 	canpf = !git commit --amend --no-edit && git push --force-with-lease
@@ -18,6 +19,7 @@
 	pushup = !git up && git push
 	re = restore
 	show-root = rev-parse --show-toplevel
+	sh = !sh
 	sw = switch
 	up = !git pull --rebase --prune "$@" && git submodule update --init --recursive
 [color "diff-highlight"]
