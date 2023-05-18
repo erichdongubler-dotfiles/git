@@ -13,7 +13,7 @@
 	diff-no-whitespace = diff --ignore-space-at-eol -b -w --ignore-blank-lines
 	graph = !"f () { tips=\"${@:-$(git ls-branches)}\"; merge_base=\"$(git merge-base --octopus $tips)\"; git pl --ancestry-path \"^$merge_base~\" $tips; }; f"
 	ls = status
-	ls-branches = branch --format '%(refname:short)'
+	ls-branches = branch --list --format '%(refname:short)'
 	pl = prettylog
 	prettylog = log --graph --decorate --format=format:'%C(dim white)---%C(reset) %C(bold blue)%h%C(reset) %C(dim white)-%C(reset)%C(auto)%d%C(reset)\n%C(white)%s%C(reset) %C(dim white)%an%C(reset) %C(dim green)(%ar)%C(reset)'
 	push-fwl = push --force-with-lease
