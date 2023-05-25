@@ -15,7 +15,7 @@
 	ls = status
 	ls-branches = branch --list --format '%(refname:short)'
 	pl = prettylog
-	prettylog = log --graph --decorate --format=format:'%C(dim white)---%C(reset) %C(bold blue)%h%C(reset) %C(dim white)-%C(reset)%C(auto)%d%C(reset)\n%C(white)%s%C(reset) %C(dim white)%an%C(reset) %C(dim green)(%ar)%C(reset)'
+	prettylog = log --graph --decorate --format=erichdongubler
 	push-fwl = push --force-with-lease
 	pushup = !git up && git push
 	re = restore
@@ -74,6 +74,8 @@
 	log = delta
 	reflog = delta
 	show = delta
+[pretty]
+	erichdongubler = format:%C(dim white)---%C(reset) %C(bold blue)%h%C(reset) %C(dim white)-%C(reset)%C(auto)%d%C(reset)\n%C(white)%s%C(reset) %C(dim white)%an%C(reset) %C(dim green)(%ar)%C(reset)
 [pull]
 	ff = only
 	rebase = true
