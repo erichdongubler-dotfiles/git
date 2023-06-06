@@ -55,6 +55,8 @@
 	commit-decoration-style = bold yellow box ul
 	file-style = bold yellow ul
 	file-decoration-style = none
+[glimpse]
+	pretty = erichdongubler
 [init]
 	defaultBranch = main
 [interactive]
