@@ -11,7 +11,7 @@
 	ckt = checkout
 	diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
 	diff-no-whitespace = diff --ignore-space-at-eol -b -w --ignore-blank-lines
-	graph = !"f () { tips=\"${@:-$(git ls-branches)}\"; merge_base=\"$(git merge-base --octopus $tips)\"; git pl --ancestry-path \"^$merge_base~\" $tips; }; f"
+	gl = !git-glimpse
 	ls = status
 	ls-branches = branch --list --format '%(refname:short)'
 	pl = prettylog
@@ -21,7 +21,7 @@
 	re = restore
 	show-root = rev-parse --show-toplevel
 	sh = !sh
-	stack = graph main HEAD
+	stack = glimpse stack
 	sw = switch
 	up = !git pull --rebase --prune --tags "$@" && git submodule update --init --recursive
 [color "diff-highlight"]
