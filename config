@@ -65,7 +65,6 @@
 	decorate = full
 [merge]
 	conflictstyle = diff3
-	ff = only
 	tool = p4merge
 [mergetool]
 	keepBackup = false
