@@ -24,6 +24,7 @@
 	sh = !sh
 	stack = glimpse stack
 	sw = switch
+	tree = glimpse locals
 	up = !git pull --rebase --prune --tags "$@" && git submodule update --init --recursive
 [color "diff-highlight"]
 	oldNormal = red bold
