@@ -15,6 +15,7 @@
 	ls = status
 	ls-branches = branch --list --format '%(refname:short)'
 	ne = !GIT_EDITOR=true git
+	nse = !GIT_SEQUENCE_EDITOR=true git
 	pl = prettylog
 	prettylog = log --graph --decorate --format=erichdongubler
 	push-fwl = push --force-with-lease
