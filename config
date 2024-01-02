@@ -65,6 +65,7 @@
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 [log]
+	abbrevCommit = true
 	decorate = full
 [merge]
 	conflictstyle = diff3
