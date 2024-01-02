@@ -94,6 +94,8 @@
 	rescheduleFailedExec = true
 	stat = true
 	updateRefs = true
+[rerere]
+	enabled = true
 [stash]
 	showPatch = true
 [svn]
