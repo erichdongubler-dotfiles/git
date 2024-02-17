@@ -63,6 +63,7 @@
 	file-style = bold yellow ul
 	file-decoration-style = none
 [fetch]
+	fsckobjects = true
 	pruneTags = true
 [glimpse]
 	pretty = erichdongubler
@@ -104,6 +105,8 @@
 	rescheduleFailedExec = true
 	stat = true
 	updateRefs = true
+[receive]
+	fsckobjects = true
 [rerere]
 	enabled = true
 [stash]
@@ -112,6 +115,8 @@
 	pushmergeinfo = true
 [tag]
 	sort = -creatordate
+[transfer]
+	fsckobjects = true
 [user]
 	email = erichdongubler@gmail.com
 	name = Erich Gubler
