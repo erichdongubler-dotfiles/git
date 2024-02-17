@@ -37,6 +37,7 @@
 	newHighlight = green bold 22
 [commit]
 	sign = true
+	verbose = true
 [core]
 	autocrlf = input
 	editor = nvim
