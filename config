@@ -101,6 +101,8 @@
 	showPatch = true
 [svn]
 	pushmergeinfo = true
+[tag]
+	sort = -creatordate
 [user]
 	email = erichdongubler@gmail.com
 	name = Erich Gubler
