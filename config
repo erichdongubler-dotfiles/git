@@ -61,6 +61,8 @@
 	commit-decoration-style = bold yellow box ul
 	file-style = bold yellow ul
 	file-decoration-style = none
+[fetch]
+	pruneTags = true
 [glimpse]
 	pretty = erichdongubler
 [init]
