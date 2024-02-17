@@ -85,8 +85,8 @@
 	ff = only
 	rebase = true
 [push]
-	default = simple
 	autoSetupRemote = true
+	default = simple
 [rebase]
 	autoSquash = true
 	autoStash = true
