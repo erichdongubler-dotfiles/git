@@ -69,6 +69,7 @@
 	diffFilter = delta --color-only --features=interactive
 [log]
 	abbrevCommit = true
+	date = "format:%Y-%m-%dT%H:%M:%S%z (%A)"
 	decorate = full
 [merge]
 	conflictstyle = diff3
