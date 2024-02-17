@@ -72,7 +72,7 @@
 	date = "format:%Y-%m-%dT%H:%M:%S%z (%A)"
 	decorate = full
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 	tool = p4merge
 [mergetool]
 	keepBackup = false
