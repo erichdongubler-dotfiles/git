@@ -49,6 +49,7 @@
 [credential]
 	helper = store
 [diff]
+	algorithm = histogram
 	colorMoved = dimmed_zebra
 	tool = kdiff3
 [difftool]
