@@ -27,6 +27,7 @@
 	sw = switch
 	tree = glimpse locals
 	up = !git pull --rebase --prune --tags "$@" && git submodule update --init --recursive
+[cinnabar]
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
