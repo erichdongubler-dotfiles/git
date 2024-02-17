@@ -27,6 +27,8 @@
 	sw = switch
 	tree = glimpse locals
 	up = !git pull --rebase --prune --tags "$@" && git submodule update --init --recursive
+[branch]
+	sort = -committerdate
 [cinnabar]
 [color "diff-highlight"]
 	oldNormal = red bold
