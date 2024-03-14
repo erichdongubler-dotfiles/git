@@ -50,7 +50,6 @@
 	helper = store
 [diff]
 	colorMoved = dimmed_zebra
-	tool = kdiff3
 [difftool]
 	prompt = false
 [delta]
