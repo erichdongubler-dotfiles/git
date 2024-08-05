@@ -50,8 +50,12 @@
 	helper = store
 [diff]
 	colorMoved = dimmed_zebra
+	external = difft
+	tool = difftastic
 [difftool]
 	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
 [delta]
 	features = decorations
 	line-numbers = true
@@ -84,6 +88,7 @@
 	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 [pager]
 	diff = delta
+	difftool = true
 	log = delta
 	reflog = delta
 	show = delta
